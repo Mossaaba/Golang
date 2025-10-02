@@ -4,11 +4,9 @@
 
 Go is widely used for cloud services, web servers, DevOps tools, and distributed systems.
 
-
 - **Simple Syntax:** Easy to learn and read.
 - **Fast Compilation:** Quick build times and efficient execution, not like intermdiate java and python 
-- **Concurrency:** Built-in support for concurrent programming with goroutines and channels.
-
+- **Concurrency:** Built-in support for concurrent programming with go routines and channels.
 - **Cross-Platform:** Compiles to multiple operating systems and architectures.
 - **Strong Standard Library:** Comprehensive libraries for networking, web servers, and more.
 
@@ -34,7 +32,7 @@ it's released by 2012
 
 ## CRACTERSTIQUE = 
 
-- SIPLICITY : 
+- SIMPLICITY : 
 - VERSATILITY (FUCTIONEL & OOP): 
 - Garbage collection : manage memeory automaticly 
 - Fast compilation : 
@@ -96,56 +94,38 @@ go run .
 
 ## Hierarchy : 
 Workspace --> modules --> package --> Go files 
-
 ## Modue 
 go mod init firstProgram
-
 ## Code rule 
 - all code have to be in curly bracecs  {}, position on 1 curly braces is 
 - Semi colon is optional , only if we need have many statmenet in the same line 
 - case sensitive 
 - Strongly typed 
-
-
 ## Comment 
 // this is a commente 
 /* This is multi line comment */ 
-
-
 ## Public and private function 
-
 - Function with Capitale lettere are public 
 - Function with Small letter are are private 
-
-
 ## Sharing package : 
-
 we can share file / function from package to package unser the same modules 
-
-
 ## 1. Basic Syntax
 	•	Variables: var x int = 5
 	•	Short declaration: y := 10
 	•	Constants: const Pi = 3.14
-
 ## 2. Data Types
 	•	Basic: int, float64, string, bool
 	•	Composite: array, slice (dynamic array), map (hash table), struct (custom types)
-
 ## 3. Control Structures
 	•	if, for (only loop), switch, select (for channels)
-
 ## 4. Concurrency
 	•	Goroutines: Lightweight threads (go functionName()).
 	•	Channels: Safe communication between goroutines.
-
     ch := make(chan int)
     go func() { ch <- 42 }()
     fmt.Println(<-ch) // Receives 42
-
 ## 5. Error Handling
 	•	No exceptions – errors are values (error type).
-
 result, err := doSomething()
 if err != nil {
     fmt.Println("Error:", err)
@@ -154,6 +134,60 @@ if err != nil {
 6. Packages & Modules
 	•	Code is organized in packages.
 	•	Dependency management via Go Modules (go mod).
-
 ## Slices 
+## Function can have two return 
+func devide (a int, n int ) (int , int ){
+       result := a/n
+	   reminder := a%n
+	   retrun result, reminder
+}
+## We can use pointer 
+to imporve memeory 
+# Struct 
+reference type and value type 
+type Car struct {
+	Name string 
+	age int 
+	adress sting 
+}
+use it : 
+var c Car 
+c := Car {
+	Name : "BMW",
+	age : 20,
+	adress : "City car ",
+}
+# Nested staruc 
+type engine struct {
+	fuleName string 
+	type int 
+	power sting 
+}
+type Car struct {
+	Name string 
+	age int 
+	adress sting 
+	enginer Engine
+}
+Copy Struct 
+# Interface 
+type module interface {
+	Speak() string 
+}
+global function to implement function 
+# Eroor handling 
+data , err := function ()
+    if err != nil {
+		fmt.Println("Error:", err)
+	}
 
+
+## GoRoutine 
+
+go function 
+
+## Channles 
+(Sender , reciver)
+
+channel <- "Done"
+reciver := <- channel
